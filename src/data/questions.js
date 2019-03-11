@@ -1,18 +1,7 @@
 export default [
 
   {
-    title: "Q1. How old are you?",
-    options: [
-      "0-5 years of age",
-      "6-10 years of age",
-      "11-20 years of age",
-      "21-40 years of age",
-      "41-200 years of age"
-    ]
-  },
-
-  {
-    title: "Q2. How happy are you?",
+    title: "Q1. How happy are you?",
     options: [
       "😭 Very Unhappy ",
       "😞 Unhappy ",
@@ -23,7 +12,7 @@ export default [
   },
 
   {
-    title: "Q3. What's your gender?",
+    title: "Q2. How do you identify?",
     options: [
       "💁🏻‍♂️ Male",
       "💁🏻‍♀️ Female",
