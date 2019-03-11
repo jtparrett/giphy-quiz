@@ -2,7 +2,7 @@ export default [
 
   {
     title: "Q1. How happy are you?",
-    options: [
+    answers: [
       "😭 Very Unhappy ",
       "😞 Unhappy ",
       "😌 Ok",
@@ -13,11 +13,11 @@ export default [
 
   {
     title: "Q2. How do you identify?",
-    options: [
-      "💁🏻‍♂️ Male",
-      "💁🏻‍♀️ Female",
-      "⚤ Transgender",
-      "None of these genders (Support LGBTQA 🙌🏻)"
+    answers: [
+      "👨 Male",
+      "👩 Female",
+      "Transgender",
+      "Non-binary"
     ]
   }
 ]

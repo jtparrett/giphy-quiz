@@ -1,36 +1,24 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 
-import useQuiz from '../hooks/useQuiz'
-import questions from '../data/questions'
-import Finish from './Finish'
+import QuizContext from '../context/quiz'
 
 const Quiz = () => {
-  const {
-    question,
-    goToNextQuestion,
-    complete,
-    selectedOptions
-  } = useQuiz(questions)
-
-  if (complete) {
-    return (
-      <Finish selectedOptions={selectedOptions} />
-    )
-  }
-
-  const { title, options } = question
+  const { 
+    question, 
+    selectAnswer 
+  } = useContext(QuizContext)
 
   return (
     <Fragment>
-      <h1 className="title">{title}</h1>
-      <ul className="options">
-        {options.map((option, index) => (
-          <li 
-            className="option" 
-            onClick={() => goToNextQuestion(option)} 
+      <h1 className="copy">{question.title}</h1>
+      <ul className="answers">
+        {question.answers.map((answer, index) => (
+          <li
+            className="answers__item"
+            onClick={() => selectAnswer(answer)}
             key={index}
           >
-            {option}
+            {answer}
           </li>
         ))}
       </ul>

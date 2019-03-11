@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const useQuiz = (questions) => {
+import questions from '../data/questions'
+
+const useQuiz = () => {
   const [index, setIndex] = useState(0)
   const [complete, setComplete] = useState(false)
-  const [selectedOptions, setSelectedOptions] = useState([])
+  const [answers, setAnswers] = useState([])
 
-  const goToNextQuestion = (option) => {
-    setSelectedOptions([
-      ...selectedOptions,
-      option
+  const selectAnswer = (answer) => {
+    setAnswers([
+      ...answers,
+      answer
     ])
 
     if (index < questions.length - 1) {
@@ -19,10 +21,10 @@ const useQuiz = (questions) => {
   }
 
   return {
-    goToNextQuestion,
     complete,
-    selectedOptions,
-    question: questions[index]
+    answers,
+    question: questions[index],
+    selectAnswer
   }
 }
 

@@ -18,28 +18,28 @@ body {
   margin: 50px auto;
 }
 
-.title {
+.copy {
   margin: 0;
   padding-bottom: 20px;
 }
 
-.option {
-  margin: 0;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.option:hover {
-  background: #eee;
-}
-
-.options {
+.answers {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.my-gif {
+.answers__item {
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.answers__item:hover {
+  background: #eee;
+}
+
+.final-gif {
   width: 100%;
   display: block;
 }
