@@ -3,11 +3,11 @@ export default [
   {
     title: "Q1. How old are you?",
     options: [
-      "0-5",
-      "6-10",
-      "11-20",
-      "21-40",
-      "41-death"
+      "0-5 years of age",
+      "6-10 years of age",
+      "11-20 years of age",
+      "21-40 years of age",
+      "41-200 years of age"
     ]
   },
 
@@ -27,9 +27,8 @@ export default [
     options: [
       "💁🏻‍♂️ Male",
       "💁🏻‍♀️ Female",
-      "⚤ Both",
-      "🤯 Neither",
-      "None of the above (Support LGBTQA 🙌🏻)"
+      "⚤ Transgender",
+      "None of these genders (Support LGBTQA 🙌🏻)"
     ]
   }
 ]
