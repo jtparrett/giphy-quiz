@@ -1,8 +1,45 @@
-html, body, #app {
-  height: 100%;
-}
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto 100px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 80px;
+  display: block;
+  margin: 50px auto;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.option {
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #eee;
+}
+
+.options {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.my-gif {
+  width: 100%;
+  display: block;
 }
