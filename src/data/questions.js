@@ -3,11 +3,11 @@ export default [
   {
     title: "Q1. How happy are you?",
     answers: [
-      "😭 Very Unhappy ",
-      "😞 Unhappy ",
+      "😭 So Sad",
+      "😞 Unhappy",
       "😌 Ok",
       "🙂 Happy",
-      "😁 Very Happy "
+      "😁 Very Happy"
     ]
   },
 

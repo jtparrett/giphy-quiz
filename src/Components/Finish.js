@@ -12,7 +12,7 @@ const Finish = () => {
       <h1 className="copy">Thank you for your time.</h1>
       <p className="copy">This GIF reprisents you (based on your answers):</p>
       {gif &&
-        <img src={gif.images.fixed_width.url} className="final-gif" />
+        <img src={gif.images.downsized_large.url} className="final-gif" />
       }
     </Fragment>
   )
