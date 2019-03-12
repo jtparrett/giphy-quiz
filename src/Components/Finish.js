@@ -4,7 +4,7 @@ import QuizContext from '../context/quiz'
 import useGeneratedGif from '../hooks/useGeneratedGif'
 
 const Finish = () => {
-  const { answers } = useContext(QuizContext)
+  const { answers, reset } = useContext(QuizContext)
   const gif = useGeneratedGif(answers)
 
   return (
@@ -14,6 +14,7 @@ const Finish = () => {
       {gif &&
         <img src={gif.images.downsized_large.url} className="final-gif" />
       }
+      <button onClick={reset} className="button">Start Again</button>
     </Fragment>
   )
 }

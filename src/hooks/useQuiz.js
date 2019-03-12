@@ -1,30 +1,50 @@
-import { useState } from 'react'
+import { useReducer } from 'react'
 
 import questions from '../data/questions'
 
-const useQuiz = () => {
-  const [index, setIndex] = useState(0)
-  const [complete, setComplete] = useState(false)
-  const [answers, setAnswers] = useState([])
+const initialState = {
+  index: 0,
+  complete: false,
+  answers: []
+}
 
-  const selectAnswer = (answer) => {
-    setAnswers([
-      ...answers,
-      answer
-    ])
-
-    if (index < questions.length - 1) {
-      return setIndex(index + 1)
+const reducer = (state, action) => {
+  switch(action.type){
+    case 'selectAnswer': {
+      const index = state.index + 1
+      
+      return {
+        index,
+        complete: index > questions.length - 1,
+        answers: [
+          ...state.answers,
+          action.answer
+        ]
+      }
     }
 
-    setComplete(true)
+    case 'reset': {
+      return initialState
+    }
+  }
+}
+
+const useQuiz = () => {
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  const selectAnswer = (answer) => {
+    dispatch({ type: 'selectAnswer', answer })
+  }
+
+  const reset = () => {
+    dispatch({ type: 'reset' })
   }
 
   return {
-    complete,
-    answers,
-    question: questions[index],
-    selectAnswer
+    ...state,
+    reset,
+    selectAnswer,
+    question: questions[state.index]
   }
 }
 
