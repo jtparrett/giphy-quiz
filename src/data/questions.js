@@ -14,8 +14,8 @@ export default [
   {
     title: "Q2. How do you identify?",
     answers: [
-      "👨 Male",
-      "👩 Female",
+      "👨 Man",
+      "👩 Woman",
       "Transgender",
       "Non-binary"
     ]
