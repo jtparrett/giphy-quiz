@@ -31,12 +31,20 @@ body {
 
 .answers__item {
   margin: 0;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  text-align: start;
   padding: 5px 10px;
   cursor: pointer;
 }
 
-.answers__item:hover {
-  background: #eee;
+@media (hover: hover) {
+  .answers__item:hover {
+    background: #eee;
+  }
 }
 
 .final-gif {

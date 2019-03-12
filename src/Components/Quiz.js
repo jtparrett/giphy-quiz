@@ -13,12 +13,10 @@ const Quiz = () => {
       <h1 className="copy">{question.title}</h1>
       <ul className="answers">
         {question.answers.map((answer, index) => (
-          <li
-            className="answers__item"
-            onClick={() => selectAnswer(answer)}
-            key={index}
-          >
-            {answer}
+          <li key={index}>
+            <button className="answers__item" onClick={() => selectAnswer(answer)}>
+              {answer}
+            </button>
           </li>
         ))}
       </ul>

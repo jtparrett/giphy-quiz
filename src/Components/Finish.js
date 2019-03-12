@@ -14,7 +14,7 @@ const Finish = () => {
       {gif &&
         <img src={gif.images.downsized_large.url} className="final-gif" />
       }
-      <button onClick={reset} className="button">Start Again</button>
+      <button onClick={reset} className="button">Restart</button>
     </Fragment>
   )
 }
